@@ -76,3 +76,16 @@ function addReposToCard(repos) {
     });
     console.log(reposEl);
 }
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  const user = search.value;
+  if (user) {
+    getRepos(user);
+    getUser(user);
+
+    search.value = "";
+    
+  }
+});
